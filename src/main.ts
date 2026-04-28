@@ -6,7 +6,7 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: process.env.FRONTEND_ORIGIN ?? 'http://localhost:3001',
+    origin: 'https://word-duel-fe.vercel.app/',
     credentials: true,
   });
   app.useGlobalPipes(
